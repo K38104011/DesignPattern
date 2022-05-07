@@ -1,14 +1,13 @@
 ﻿using System.Text;
 
 var builder = new HtmlBuilder("ul");
-builder.AddChild("li", "Hello");
-builder.AddChild("li", "World");
+builder.AddChild("li", "Hello").AddChild("li", "World");
 Console.WriteLine(builder);
 
 public class HtmlBuilder
 {
     private readonly string rootName;
-    HtmlElement root = new HtmlElement();
+    HtmlElement root = new();
 
     public HtmlBuilder(string rootName)
     {
@@ -16,10 +15,11 @@ public class HtmlBuilder
         root.Name = rootName;
     }
 
-    public void AddChild(string childName, string childText)
+    public HtmlBuilder AddChild(string childName, string childText)
     {
         var e = new HtmlElement(childName, childText);
         root.Elements.Add(e);
+        return this;
     }
 
     public override string ToString()
