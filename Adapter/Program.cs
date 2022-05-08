@@ -1,4 +1,5 @@
-﻿using System.Collections.ObjectModel;
+﻿using System.Collections;
+using System.Collections.ObjectModel;
 using static System.Console;
 
 var vectorObjects = new List<VectorObject>
@@ -7,12 +8,19 @@ var vectorObjects = new List<VectorObject>
     new VectorRectangle(3, 3, 6, 6)
 };
 
-foreach (var vo in vectorObjects)
+Draw(vectorObjects);
+Draw(vectorObjects);
+
+
+static void Draw(IEnumerable<VectorObject> vectorObjects)
 {
-    foreach (var line in vo)
+    foreach (var vo in vectorObjects)
     {
-        var adapter = new LineToPointAdapter(line);
-        adapter.ToList().ForEach(DrawPoint);
+        foreach (var line in vo)
+        {
+            var adapter = new LineToPointAdapter(line);
+            adapter.ToList().ForEach(DrawPoint);
+        }
     }
 }
 
@@ -23,12 +31,19 @@ static void DrawPoint(Point point)
 
 #region Adapter
 // Build an adpater to convert vector to point
-public class LineToPointAdapter : Collection<Point>
+public class LineToPointAdapter : IEnumerable<Point>
 {
     public static int count;
+    private static Dictionary<int, List<Point>> cache = new Dictionary<int, List<Point>>();
+
     public LineToPointAdapter(Line line)
     {
-        WriteLine($"{++count}: Generating points for line [{line.Start.X},{line.Start.Y}]-[{line.End.X},{line.End.Y}] (no caching)");
+        var hash = line.GetHashCode();
+        if (cache.ContainsKey(hash)) return;
+
+        WriteLine($"{++count}: Generating points for line [{line.Start.X},{line.Start.Y}]-[{line.End.X},{line.End.Y}]");
+
+        var points = new List<Point>();
 
         int left = Math.Min(line.Start.X, line.End.X);
         int right = Math.Max(line.Start.X, line.End.X);
@@ -41,16 +56,25 @@ public class LineToPointAdapter : Collection<Point>
         {
             for (int y = top; y <= bottom; ++y)
             {
-                Add(new Point(left, y));
+                points.Add(new Point(left, y));
             }
         }
         else if (dy == 0)
         {
             for (int x = left; x <= right; ++x)
             {
-                Add(new Point(x, top));
+                points.Add(new Point(x, top));
             }
         }
+
+        cache.Add(hash, points);
+    }
+
+    public IEnumerator<Point> GetEnumerator() => cache.Values.SelectMany(x => x).GetEnumerator();
+
+    IEnumerator IEnumerable.GetEnumerator()
+    {
+        return GetEnumerator();
     }
 }
 #endregion
@@ -71,7 +95,7 @@ public class VectorObject : Collection<Line>
 
 }
 
-public class Line
+public class Line : IEquatable<Line?>
 {
     public Point Start, End;
 
@@ -79,6 +103,23 @@ public class Line
     {
         Start = start;
         End = end;
+    }
+
+    public override bool Equals(object? obj)
+    {
+        return Equals(obj as Line);
+    }
+
+    public bool Equals(Line? other)
+    {
+        return other != null &&
+               EqualityComparer<Point>.Default.Equals(Start, other.Start) &&
+               EqualityComparer<Point>.Default.Equals(End, other.End);
+    }
+
+    public override int GetHashCode()
+    {
+        return HashCode.Combine(Start, End);
     }
 }
 
