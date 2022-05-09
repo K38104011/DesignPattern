@@ -9,19 +9,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SingleResponsibilityPrincip
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LiskovSubstitutionPrinciple", "LiskovSubstitutionPrinciple\LiskovSubstitutionPrinciple.csproj", "{2C294024-EC40-48A6-8FBB-0339BD764B24}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceSegregationPrinciple", "InterfaceSegregationPrinciple\InterfaceSegregationPrinciple.csproj", "{F8213022-A9E4-4FBC-B88F-A69F35466877}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InterfaceSegregationPrinciple", "InterfaceSegregationPrinciple\InterfaceSegregationPrinciple.csproj", "{F8213022-A9E4-4FBC-B88F-A69F35466877}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependencyInversionPrinciple", "DependencyInversionPrinciple\DependencyInversionPrinciple.csproj", "{A01D7661-A692-4066-B7FE-6471A1D3C15A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DependencyInversionPrinciple", "DependencyInversionPrinciple\DependencyInversionPrinciple.csproj", "{A01D7661-A692-4066-B7FE-6471A1D3C15A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SOLID", "SOLID", "{23191426-E646-4641-8E30-334CBE1E8A80}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Creational Patterns", "Creational Patterns", "{0FAD20D6-4492-4F9D-92D2-6FFB8A0B6C0F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Builder", "Builder\Builder.csproj", "{A1082B07-404A-41FF-81FF-92033EB8949B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Builder", "Builder\Builder.csproj", "{A1082B07-404A-41FF-81FF-92033EB8949B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Builders", "Builders", "{AFF30D82-902F-4F36-8CC5-3E91D2FEFB8B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StepwiseBuilder", "StepwiseBuilder\StepwiseBuilder.csproj", "{EABBFE70-4EA0-4183-B676-BD76A6BF7A43}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StepwiseBuilder", "StepwiseBuilder\StepwiseBuilder.csproj", "{EABBFE70-4EA0-4183-B676-BD76A6BF7A43}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Structural Patterns", "Structural Patterns", "{EB6E79AF-D5D8-4471-8F1F-988252AFBFBF}"
 EndProject
@@ -29,9 +29,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Patterns", "Patterns", "{EB
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Adapters", "Adapters", "{910B00AE-4588-46DE-9285-F50934864B23}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adapter", "Adapter\Adapter.csproj", "{F8D4DE0E-6860-4637-8D8F-1AE899477967}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Adapter", "Adapter\Adapter.csproj", "{F8D4DE0E-6860-4637-8D8F-1AE899477967}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practice", "Practice\Practice.csproj", "{3242E171-7B6F-4A45-A52F-76BDCD8F3F13}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Behavioral Patterns", "Behavioral Patterns", "{E7E1A727-C2C0-4CF9-8926-D840E67FE20E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Observer", "Observer\Observer.csproj", "{CDFC0949-90B2-4B08-B0CF-9321B012B74C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +79,10 @@ Global
 		{3242E171-7B6F-4A45-A52F-76BDCD8F3F13}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3242E171-7B6F-4A45-A52F-76BDCD8F3F13}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3242E171-7B6F-4A45-A52F-76BDCD8F3F13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDFC0949-90B2-4B08-B0CF-9321B012B74C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDFC0949-90B2-4B08-B0CF-9321B012B74C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDFC0949-90B2-4B08-B0CF-9321B012B74C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDFC0949-90B2-4B08-B0CF-9321B012B74C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -93,6 +101,8 @@ Global
 		{910B00AE-4588-46DE-9285-F50934864B23} = {EB6E79AF-D5D8-4471-8F1F-988252AFBFBF}
 		{F8D4DE0E-6860-4637-8D8F-1AE899477967} = {910B00AE-4588-46DE-9285-F50934864B23}
 		{3242E171-7B6F-4A45-A52F-76BDCD8F3F13} = {910B00AE-4588-46DE-9285-F50934864B23}
+		{E7E1A727-C2C0-4CF9-8926-D840E67FE20E} = {EB121F53-D129-4B35-818D-DA9504B2567A}
+		{CDFC0949-90B2-4B08-B0CF-9321B012B74C} = {E7E1A727-C2C0-4CF9-8926-D840E67FE20E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3CFBF6E4-7B82-4027-84CD-D7A2E69ECCE7}
