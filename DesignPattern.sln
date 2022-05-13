@@ -62,6 +62,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Compositions", "Composition
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompositionPractice", "CompositionPractice\CompositionPractice.csproj", "{4196E2DD-F8A4-42E6-954C-C224A871A5A4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Composition", "Composition\Composition.csproj", "{DC697F0A-46E5-4CB8-B8F8-D2C2396064B8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -132,6 +134,10 @@ Global
 		{4196E2DD-F8A4-42E6-954C-C224A871A5A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4196E2DD-F8A4-42E6-954C-C224A871A5A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4196E2DD-F8A4-42E6-954C-C224A871A5A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC697F0A-46E5-4CB8-B8F8-D2C2396064B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC697F0A-46E5-4CB8-B8F8-D2C2396064B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC697F0A-46E5-4CB8-B8F8-D2C2396064B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC697F0A-46E5-4CB8-B8F8-D2C2396064B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -162,6 +168,7 @@ Global
 		{5A18F9A0-68FF-41B3-9957-391CC7C81910} = {E7E1A727-C2C0-4CF9-8926-D840E67FE20E}
 		{87A6D960-AF71-440C-B4DC-6A9AAC84ACC0} = {EB6E79AF-D5D8-4471-8F1F-988252AFBFBF}
 		{4196E2DD-F8A4-42E6-954C-C224A871A5A4} = {87A6D960-AF71-440C-B4DC-6A9AAC84ACC0}
+		{DC697F0A-46E5-4CB8-B8F8-D2C2396064B8} = {87A6D960-AF71-440C-B4DC-6A9AAC84ACC0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3CFBF6E4-7B82-4027-84CD-D7A2E69ECCE7}
